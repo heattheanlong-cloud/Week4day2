@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><title>Simple Canvas Example</title>
-<link rel="stylesheet" href="../style/default.css"></head>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Canvas Example</title>
+  <link rel="stylesheet" href="../style/default.css">
+</head>
+
 <body>
-<nav><a href="../index.html">about</a> | <a href="image,audio,video.html">multimedia</a> | <a href="canvas.html">canvas</a> | <a href="svg.html">svg</a> | <a href="embed object iframe.html">embed/object/iframe</a></nav>
-<hr>
-<canvas id="myCanvas" width="500" height="300" style="border:1px solid black;">Your browser does not support the canvas element.</canvas>
-<script>
-const canvas = document.getElementById("myCanvas");
-const ctx = canvas.getContext("2d");
-let x = 50, y = 150, dx = 2;
-function drawBall() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.beginPath();
-  ctx.arc(x, y, 20, 0, Math.PI * 2);
-  ctx.fillStyle = "blue";
-  ctx.fill();
-  ctx.closePath();
-  x += dx;
-  if (x + 20 > canvas.width || x - 20 < 0) { dx = -dx; }
-  requestAnimationFrame(drawBall);
-}
-drawBall();
-</script>
+  <nav><a href="../index.html">about</a> | <a href="image,audio,video.html">multimedia</a> | <a
+      href="canvas.html">canvas</a> | <a href="svg.html">svg</a> | <a
+      href="embed object iframe.html">embed/object/iframe</a></nav>
+  <hr>
+  <canvas id="myCanvas" width="500" height="300" style="border:1px solid black;">Your browser does not support the
+    canvas element.</canvas>
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+    let x = 50, y = 150, dx = 2;
+    function drawBall() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      ctx.arc(x, y, 20, 0, Math.PI * 2);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+      x += dx;
+      if (x + 20 > canvas.width || x - 20 < 0) { dx = -dx; }
+      requestAnimationFrame(drawBall);
+    }
+    drawBall();
+  </script>
 </body>
+
 </html>
