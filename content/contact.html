@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Contact</title>
+<link rel="stylesheet" href="../style/default.css"></head>
+<body>
+<header><nav>
+<a href="../index.html">about</a> |
+<a href="work.html">project/work</a> |
+<a href="resume.html">resume</a> |
+<a href="contact.html">contact</a> |
+<a href="image,audio,video.html">multimedia</a>
+</nav></header>
+<main>
+<section id="contact">
+<h1>Get in touch</h1>
+<p>Feel free to reach out to via following form.</p>
+<form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+<div><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
+<div><label for="email">Email Address</label><input type="email" id="email" name="email" required></div>
+<div><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="+123456789"></div>
+<div><label for="company">Company / Organization</label><input type="text" id="company" name="company"></div>
+<div><label for="subject">Subject</label><input type="text" id="subject" name="subject"></div>
+<div><label for="reason">Reason for Contact</label>
+<select id="reason" name="reason">
+<option value="">-- Select an Option --</option>
+<option value="project">Work on a Project</option>
+<option value="job">Job Opportunity</option>
+<option value="collaboration">Collaboration</option>
+<option value="general">General Inquiry</option>
+</select></div>
+<div><label for="message">Your Message</label><textarea id="message" name="message" rows="6" required></textarea></div>
+<div><input type="checkbox" id="newsletter" name="newsletter"><label for="newsletter">Subscribe me to your newsletter</label></div>
+<button type="submit">Send Message</button>
+</form>
+</section>
+</main>
+<footer><p>&copy; 2026 My Portfolio</p></footer>
+</body>
+</html>
